@@ -13,12 +13,10 @@ import java.util.Set;
 import java.util.stream.Collectors;
 
 public class NioServer {
-
     private ServerSocketChannel serverChannel;
     private Selector selector;
     private ByteBuffer buf;
     private Path currentDir;
-
 
     public NioServer (int port) throws IOException {
         currentDir = Paths.get("./");
@@ -33,7 +31,6 @@ public class NioServer {
             selector.select();
             Set<SelectionKey> keys = selector.selectedKeys();
             Iterator<SelectionKey> iterator = keys.iterator();
-
             try {
                 while (iterator.hasNext()) {
                     SelectionKey key = iterator.next();

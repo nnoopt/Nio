@@ -1,5 +1,4 @@
 package geekbrains.nio;
-
 import java.util.Arrays;
 
 public enum TerminalCommandType {
